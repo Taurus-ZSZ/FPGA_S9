@@ -1,52 +1,27 @@
-# Prerequisites
-*.d
+#忽略掉打开excel时的临时文件
+*.xlsx#
+*.ods#
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+*.bak
 
-# Linker output
-*.ilk
-*.map
-*.exp
+#说明一下：在gitignore中设置不忽略的文件（夹），就不能跳文件的层级
 
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+#具体说明一下：
+#忽略掉work子文件夹下的所有文件夹
+**/work/*
+#不忽略掉work子文件夹下的xxx.sdk文件夹
+!**/work/*.sdk/
+#忽略掉xxx.sdk子文件夹下下面的文件或文件夹
+**/work/*.sdk/.metadata/
+**/work/*.sdk/.sdk/
+**/work/*.sdk/*_bsp/
+**/work/*.sdk/RemoteSystemsTempFiles/
+**/work/*.sdk/*_hw_platform_*/
+**/work/*.sdk/webtalk/
+**/work/*.sdk/*.hdf
+**/work/*.sdk/*.log
+#经过上面的操作，已经只剩下sdk文件夹下的工程文件
+#下面是将sdk工程文件夹下的 debug文件夹和 .cproject .project 忽略掉，只剩下src文件
+**/work/**/Debug/
+**/work/**/.cproject
+**/work/**/.project
