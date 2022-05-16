@@ -1,19 +1,6 @@
-# FPGA_S9 工程
-## 文件结构
-- 00_DOC 
-    - 存放主要的文档
-- 01_Hardware
-    - 存放与硬件相关的文件  
-- 02_pl_proj
-    - zynq PL端程序  
-- 03_ps_proj 
-    - ps端的程序  
-- 04_linux
-    - linux 学习工程 还没有添加  
+ # 工程相关指令
 
 
-
-fpga 工程s9 fpga 板卡  
 
 ## git 提交前的相关工作
 
@@ -41,15 +28,15 @@ fpga 工程s9 fpga 板卡
 
 
 
-### 导出tcl 文件
+## 导出tcl 文件
 
-#### 导出project
+### 导出project
 
  ```tcl
-write_project_tcl ./gen_project.tcl
+ write_project_tcl ./gen_project.tcl
  ```
 
-#### 导出IP 的tcl
+### 导出IP 的tcl
 
 ```tcl
 # 每个ip都导出一个tcl文件
@@ -58,7 +45,7 @@ write_ip_tcl -force -multiple_files [get_ips] ../src/02_IP_Core
 write_ip_tcl -force  [get_ips] ../src/02_IP_Core/gen_ip.tcl
 ```
 
-#### 导出bd 的tcl
+### 导出bd 的tcl
 
 1. 打开bd文件
 
@@ -75,10 +62,3 @@ write_ip_tcl -force  [get_ips] ../src/02_IP_Core/gen_ip.tcl
    ```
 
    
-
-
-
-
-
-## 问题
-如何之将sdk的源文件上传到github

@@ -1,0 +1,2 @@
+./pins.xdc
+./timing.xdc 
