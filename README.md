@@ -36,7 +36,7 @@ fpga 工程s9 fpga 板卡
 4. 将本地仓库推送到远程仓库
 
    ```sh
-   git push 
+   git push origin master
    ```
 
 
